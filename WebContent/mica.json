@@ -28,7 +28,7 @@
 				"type": "script_iframe",
 				"title": "Choose a movie here and click submit",
 				"iframe": "https://plot.ly/~USC.SAIL.lab/4.embed?show_link=false",
-				"script": "./projectscripts/char_vis_demo.js"
+				"script": "project_scripts/char_vis_demo.js"
 				}]
 				}
 	],
@@ -81,7 +81,7 @@
 			}
 	],
 
-	"aboutUs":"Welcome to the SAIL Media Informatics and Content Analysis (MICA) group.At the Signal Analysis and Interpretation Laboratory (SAIL), we conduct research on a wide variety of media related tasks which focus on human-centered applications. Our emphasis is on speech, video, music, text and multimodal information processing.MICA's research applications and systems development concentrate on domains with direct societal relevance ranging from automated movie content analysis, understanding gender roles to gathering informatics on human interactions from speech and body gestures.",
+	"aboutUs":"Welcome to the SAIL Media Informatics and Content Analysis (MICA) group.At the Signal Analysis and Interpretation Laboratory (SAIL),<br>we conduct research on a wide variety of media related tasks which focus on human-centered applications. Our emphasis is on speech, video, music, text and multimodal information processing.<br>MICA's research applications and systems development concentrate on domains with direct societal relevance ranging from automated movie content analysis, understanding gender roles to gathering informatics on human interactions from speech and body gestures.",
 	"slides":[{
 			"name": "Character Network Visualization",
 			"img": "http://sail.usc.edu/mica/imgs/demo_4.png",

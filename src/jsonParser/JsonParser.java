@@ -56,7 +56,7 @@ public class JsonParser extends HttpServlet {
 	public static void setAttributesFromJson(HttpServletRequest request, HttpServletResponse response) {
 		try {
 			String path = request.getServletContext().getRealPath("/mica.json");
-			// System.out.println("path - "+path);
+			 System.out.println("path - "+path);
 			FileReader fr = new FileReader(path);
 			BufferedReader bufferedReader = new BufferedReader(fr);
 			Gson gson = new Gson();

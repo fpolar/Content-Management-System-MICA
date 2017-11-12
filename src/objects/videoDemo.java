@@ -18,4 +18,7 @@ public class videoDemo extends Demo  implements Serializable {
 	public void setVideo(String video) {
 		this.video = video;
 	}
+	public String printHTML() {
+		return super.printHTML()+"<video src=\""+video+"\">";
+	}
 }

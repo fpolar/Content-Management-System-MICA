@@ -27,6 +27,6 @@ public class script_iframeDemo extends Demo implements Serializable {
 		this.script = script;
 	}
 	public String printHTML() {
-		return super.printHTML()+iframe+"<script src=\""+script+"\"></script>";
+		return super.printHTML()+"<iframe src=\""+iframe+"\"></iframe><script src=\""+script+"\"></script>";
 	}
 }

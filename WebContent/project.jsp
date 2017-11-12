@@ -9,15 +9,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MICA Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="/MICA/css/MICA.css">
-<link rel="stylesheet" type="text/css" href="/MICA/css/projects.css">
+<link rel="stylesheet" type="text/css" href="css/MICA.css">
+<link rel="stylesheet" type="text/css" href="css/project.css">
 <link rel="stylesheet" type="text/css"
 	href="/MICA/css/project_pages/auto_cont_analysis.css">
-<link rel="stylesheet" type="text/css" href="/MICA/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="slick/slick.css" />
 <link rel="stylesheet" type="text/css"
-	href="/MICA/slick/slick-theme.css" />
+	href="slick/slick-theme.css" />
 <link rel="stylesheet" type="text/css"
-	href="/MICA/css/slick_modifications.css">
+	href="css/slick_modifications.css">
 <link
 	href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Josefin+Sans:300,300i,400,400i,700,700i|Lobster|Pacifico|Sansita:400,400i,700,900"
 	rel="stylesheet">
@@ -27,16 +27,16 @@
 		<img src="../imgs/SailLogo.png" class="logo">
 
 		<div id="mica">
-			<a href="../home.jsp">MICA</a>
+			<a href="home.jsp">MICA</a>
 		</div>
 		<div class="menu">
-			<a href="../home.jsp#people">People</a> <a href="../projects.jsp">Projects</a>
+			<a href="home.jsp#people">People</a> <a href="projects.jsp">Projects</a>
 			<a href="http://sail.usc.edu/aigaion2/index.php/topics/single/13">Publications</a>
 		</div>
-	</div>
-
+	</div><br>
 	<c:forEach items="${projects}" var="project">
-		<c:if test="${project.getTitle().equals(projectName)}">
+	<br>
+		<c:if test="${project.getTitle().equals(param['projectName'])}">
 			<div id="page_title">
 				<h1>${project.getTitle()}</h1>
 			</div>

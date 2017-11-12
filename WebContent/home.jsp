@@ -24,7 +24,7 @@
 		<img src="imgs/SailLogo.png" class="logo">
 
 		<div class="menu">
-			<a href="#people">People</a> <a href="../MICA/projects.jsp">Projects</a>
+			<a href="#people">People</a> <a href="./projects.jsp">Projects</a>
 			<a href="http://sail.usc.edu/aigaion2/index.php/topics/single/13">Publications</a>
 		</div>
 	</div>
@@ -71,7 +71,6 @@
 	<div id="people">
 		<ul>
 			<c:forEach items="${people}" var="peopleGroup">
-			${peopleGroup.getValue() }
 				<li>
 					<h3>${peopleGroup.getKey()}</h3>
 					<ul class="thumbnail">

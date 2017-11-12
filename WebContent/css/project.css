@@ -1,0 +1,25 @@
+
+#mica{
+    float: left;
+    margin: .6vh 0vw 0vh 1.6vw;
+    letter-spacing: .45vw;
+    font-size: 1.8vw;
+    font-weight: 700;
+}
+#mica a{
+    margin: 0 0 0 0;
+    color: #2384c5 !important;
+    text-decoration: none;
+}
+#mica a{
+    margin: 0 0 0 0;
+    color: #2384c5 !important;
+    text-decoration: none;
+}
+
+/*current projects css*/
+li{
+    margin-top:1vh;
+    margin-bottom:1vh;
+    display: inline-block;
+}
