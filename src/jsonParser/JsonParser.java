@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,13 +18,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import objects.Demo;
-import objects.Person;
-import objects.Project;
-import objects.Slide;
-import objects.iframeDemo;
-import objects.script_iframeDemo;
-import objects.videoDemo;
+import objects.*;
 
 public class JsonParser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -39,6 +32,7 @@ public class JsonParser extends HttpServlet {
 		ArrayList<Project> projects = getProjects(json);
 		HashMap<String, ArrayList<Person>> people = getPeople(json);
 		ArrayList<Slide> slides = getSlides(json);
+		ArrayList<Page> pages = getPages(json);
 		String aboutUs = getAboutUs(json);
 
 		printInfo(projects, people, slides, aboutUs);
@@ -117,6 +111,22 @@ public class JsonParser extends HttpServlet {
 		}
 		return out;
 	}
+	/*
+	 * Takes The JSON object(containing entire files data) and returns an arraylist
+	 * of pages from that json file
+	 */
+	public static ArrayList<Page> getPages(JsonObject json) {
+		ArrayList<Page> out = new ArrayList<Page>();
+		JsonArray pages = json.getAsJsonArray("pages");
+		for (JsonElement p : pages) {
+			JsonObject page = p.getAsJsonObject();
+			String title = page.get("title").getAsString();
+			String link = page.get("link").getAsString();
+			Page temp = new Page(title, link);
+			out.add(temp);
+		}
+		return out;
+	}
 
 	/*
 	 * takes a jsonObject representing a project field in the labs json file and
@@ -144,19 +154,20 @@ public class JsonParser extends HttpServlet {
 			JsonObject demo = d.getAsJsonObject();
 			String type = demo.get("type").getAsString();
 			String title = demo.get("title").getAsString();
+			String id = demo.get("id").getAsString();
 			Demo temp;
 			if (type.equals("iframe")) {
 				String iframe = demo.get("iframe").getAsString();
-				temp = new iframeDemo(type, title, iframe);
+				temp = new iframeDemo(type, title, id, iframe);
 			} else if (type.equals("script_iframe")) {
 				String iframe = demo.get("iframe").getAsString();
 				String script = demo.get("script").getAsString();
-				temp = new script_iframeDemo(type, title, iframe, script);
+				temp = new script_iframeDemo(type, title, id, iframe, script);
 			} else if (type.equals("video")) {
 				String link = demo.get("link").getAsString();
-				temp = new videoDemo(type, title, link);
+				temp = new videoDemo(type, title, id, link);
 			} else {
-				temp = new Demo(type, title);
+				temp = new Demo(type, title, id);
 			}
 			out.add(temp);
 		}

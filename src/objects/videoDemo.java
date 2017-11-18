@@ -8,8 +8,8 @@ public class videoDemo extends Demo  implements Serializable {
 	 */
 	private static final long serialVersionUID = -5446995988714862792L;
 	private String video;
-	public videoDemo(String ty, String ti, String v) {
-		super(ty, ti);
+	public videoDemo(String ty, String ti, String i, String v) {
+		super(ty, ti, i);
 		video = v;
 	}
 	public String getVideo() {

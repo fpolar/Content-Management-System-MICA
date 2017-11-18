@@ -9,9 +9,9 @@ public class script_iframeDemo extends Demo implements Serializable {
 	private static final long serialVersionUID = -6748191025887146555L;
 	private String iframe;
 	private String script;
-	public script_iframeDemo(String ty, String ti,String i, String sc) {
-		super(ty, ti);
-		iframe=i;
+	public script_iframeDemo(String ty, String ti,String i,String f, String sc) {
+		super(ty, ti, i);
+		iframe=f;
 		script=sc;
 	}
 	public String getIframe() {

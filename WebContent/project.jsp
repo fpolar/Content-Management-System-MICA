@@ -56,7 +56,7 @@
 				<div id="demos">
 					<ul>
 						<c:forEach items="${project.getDemos()}" var="demo">
-							<li id="demo-${demo.getTitle() }">${demo.printHTML()}</li>
+							<li id="${demo.getId() }">${demo.printHTML()}</li>
 						</c:forEach>
 					</ul>
 				</div>

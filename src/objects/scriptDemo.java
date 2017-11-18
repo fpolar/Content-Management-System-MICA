@@ -8,8 +8,8 @@ public class scriptDemo extends Demo implements Serializable {
 	 */
 	private static final long serialVersionUID = -5760901514870459853L;
 	private String script;
-	public scriptDemo(String ty, String ti, String sc) {
-		super(ty, ti);
+	public scriptDemo(String ty, String ti, String i, String sc) {
+		super(ty, ti, i);
 		script = sc;
 	}
 

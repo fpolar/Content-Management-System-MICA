@@ -5,11 +5,13 @@
 		"instructions": [],
 		"demos": [{
 			"type": "video",
+				"id": "hf_video",
 			"title": "Hidden Figures (2016)",
 			"link": "https://drive.google.com/file/d/0B3ydbkt5jAUyMEJTdTZIeHVuVTA/preview?autoplay=0"
 			},
 			{
 				"type": "video",
+				"id": "spy_video",
 				"title": "Spy (2015)",
 				"link": "https://drive.google.com/file/d/0B8132RAFdTk7SVZVUlYySkdIV1U/preview"
 				}]
@@ -26,6 +28,7 @@
 				{"7":"If you use this in your work please cite the following paper"}],
 			"demos": [{
 				"type": "script_iframe",
+				"id": "choose_a_movie",
 				"title": "Choose a movie here and click submit",
 				"iframe": "https://plot.ly/~USC.SAIL.lab/4.embed?show_link=false",
 				"script": "project_scripts/char_vis_demo.js"

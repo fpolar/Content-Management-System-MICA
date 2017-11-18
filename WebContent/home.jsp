@@ -26,6 +26,9 @@
 		<div class="menu">
 			<a href="#people">People</a> <a href="./projects.jsp">Projects</a>
 			<a href="http://sail.usc.edu/aigaion2/index.php/topics/single/13">Publications</a>
+		<c:forEach items="${pages}" var="page">
+			<a href="${page.getLink()}">${page.getTitle()}</a>
+		</c:forEach>
 		</div>
 	</div>
 	<div id="page_title">
@@ -53,18 +56,6 @@
 			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 		<h1>About Us</h1>
-		<!-- <div class="textb">Welcome to the SAIL Media Informatics and
-			Content Analysis (MICA) group.</div>
-		<div class="textb">At the Signal Analysis and Interpretation
-			Laboratory (SAIL), we conduct research on a wide variety of media
-			related tasks which focus on human-centered applications. Our
-			emphasis is on speech, video, music, text and multimodal information
-			processing.</div>
-		<div class="textb">MICA's research applications and systems
-			development concentrate on domains with direct societal relevance
-			ranging from automated movie content analysis, understanding gender
-			roles to gathering informatics on human interactions from speech and
-			body gestures.</div>-->
 		<div class="textb">${aboutUs }</div>
 	</div>
 
@@ -95,12 +86,9 @@
 	</div>
 
 	<div id="footer">
-
-		<div id="tweets">
-			<a class="twitter-timeline" href="https://twitter.com/SAIL_USC">Tweets
-				by SAIL_USC</a>
-			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
+	<div id="powered-by">
+	
+	</div>
 		<div id="twitter">
 			<a href="https://twitter.com/SAIL_USC" class="twitter-follow-button"
 				data-size="large" data-show-count="false">Follow @SAIL_USC</a>

@@ -7,11 +7,12 @@ public class Demo implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 3409914694347427302L;
-	private String type, title;
+	private String type, title, id;
 
-	public Demo(String ty, String ti) {
+	public Demo(String ty, String ti, String i) {
 		type = ty;
 		title = ti;
+		id = i;
 	}
 
 	public String getType() {
@@ -36,5 +37,13 @@ public class Demo implements Serializable {
 
 	public String printHTML() {
 		return "<h3>"+title+"</h3>";
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 }

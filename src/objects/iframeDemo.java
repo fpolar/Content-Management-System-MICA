@@ -8,9 +8,9 @@ public class iframeDemo extends Demo implements Serializable {
 	 */
 	private static final long serialVersionUID = -5222431365999229528L;
 	private String iframe;
-	public iframeDemo(String ty, String ti,String i) {
-		super(ty, ti);
-		iframe=i;
+	public iframeDemo(String ty, String ti,String i,String f) {
+		super(ty, ti, i); 
+		iframe=f;
 	}
 	public String getIframe() {
 		return iframe;
