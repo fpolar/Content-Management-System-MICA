@@ -31,6 +31,9 @@
 			<a href="home.jsp#people">People</a> <a
 				href="projects.jsp">Projects</a> <a
 				href="http://sail.usc.edu/aigaion2/index.php/topics/single/13">Publications</a>
+			<c:forEach items="${pages}" var="page">
+				<a href="${page.getLink()}">${page.getTitle()}</a>
+			</c:forEach>
 		</div>
 	</div>
 	<div id="page_title">
@@ -48,5 +51,19 @@
 			</li>
 		</c:forEach>
 	</ul>
+	
+
+	<div id="footer">
+		<div id="powered-by">
+			<a href="https://github.com/fpolar"><i style="color:grey" class="fa fa-github" aria-hidden="true"></i></a> Website and CMS
+			designed by <a href="http://frankanthonypol.com">Frank Pol</a>.
+		</div>
+		<div id="twitter">
+			<a href="https://twitter.com/SAIL_USC" class="twitter-follow-button"
+				data-size="large" data-show-count="false">Follow @SAIL_USC</a>
+			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+	</div>
 </body>
 </html>
