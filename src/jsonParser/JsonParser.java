@@ -23,16 +23,17 @@ import objects.*;
 public class JsonParser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		FileReader fr = new FileReader("mica.json");
+		String path = request.getServletContext().getRealPath("/mica.json");
+		FileReader fr = new FileReader(path);
 		BufferedReader bufferedReader = new BufferedReader(fr);
 		Gson gson = new Gson();
 		JsonObject json = gson.fromJson(bufferedReader, JsonObject.class);
 		ArrayList<Project> projects = getProjects(json);
 		HashMap<String, ArrayList<Person>> people = getPeople(json);
 		ArrayList<Slide> slides = getSlides(json);
-		ArrayList<Page> pages = getPages(json);
+		//ArrayList<Page> pages = getPages(json);
 		String aboutUs = getAboutUs(json);
 
 		printInfo(projects, people, slides, aboutUs);
